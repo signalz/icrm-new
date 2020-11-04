@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import { ConnectedRouter } from "connected-react-router";
+import FontFaceObserver from "fontfaceobserver";
+import $ from 'jquery';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+// Import root app
+import App from "./containers/App";
+
+// Import Language Provider
+import LanguageProvider from "./containers/LanguageProvider";
+
+import { store, history } from "./configureStore";
+
+// Import i18n messages
+import { translationMessages } from "./i18n";
+
+window.jQuery = $;
+window.$ = $;
+global.jQuery = $;
+
+const openSansObserver = new FontFaceObserver("Open Sans", {});
+
+// When Open Sans is loaded, add a font-family using Open Sans to the body
+openSansObserver.load().then(() => {
+  document.body.classList.add("fontLoaded");
+});
+
+
+function Main() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <LanguageProvider>
+        <ConnectedRouter history={history}>
+          <App />
+        </ConnectedRouter>
+      </LanguageProvider>
+    </Provider>
   );
 }
 
-export default App;
+export default Main;

@@ -1,0 +1,22 @@
+{
+  "appName": "Solid",
+  "update.success": "Cập nhật thành công!",
+  "update.error": "Cập nhật không thành công",
+
+  "common.button.cancel": "Hủy",
+  "common.button.ok": "Đồng ý",
+  "common.button.register": "Đăng ký",
+  "common.button.back": "Quay lại",
+
+  "loginPage.titlePage": "Đăng nhập",
+  "loginPage.signIn": "Đăng nhập",
+  "loginPage.forgotPassword": "Quyên mật khẩu",
+  "loginPage.userIDPlaceholder": "ID người dùng",
+  "loginPage.passwordPlaceholder": "Mật khẩu",
+  "loginPage.title": "Đăng nhập | Solid",
+  "loginPage.validate.loginId": "ID không đúng",
+  "loginPage.validate.loginId.required": "Bạn cần nhập ID",
+  "loginPage.validate.password": "Password không đúng",
+  "loginPage.validate.password.required": "Bạn cần nhập mật khẩu",
+  "loginPage.validate.notFound": "Không tìm thấy người dùng"
+}
