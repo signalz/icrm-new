@@ -2,6 +2,8 @@ import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
 import FontFaceObserver from "fontfaceobserver";
 import $ from 'jquery';
+import 'antd/dist/antd.css';
+import 'sanitize.css/sanitize.css';
 import logo from "./logo.svg";
 import "./App.css";
 
